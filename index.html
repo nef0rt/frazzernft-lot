@@ -9,38 +9,51 @@
 </head>
 <body>
     <div class="container">
+        <!-- Карточка NFT -->
         <div class="nft-card">
             <div class="nft-header">
                 <span class="nft-collection">Snoop Dogg</span>
                 <span class="nft-id">#517387</span>
             </div>
             
-            <div class="nft-image-placeholder">
-                <div class="placeholder-content">
+            <div class="nft-image">
+                <div class="nft-image-content">
+                    <div class="nft-emoji">🎤</div>
                     <div class="nft-model">Chill Homie 3%</div>
-                    <div class="nft-backdrop">Sapphire 1.5%</div>
-                    <div class="nft-symbol">Inguz Rune 0.4%</div>
+                    <div class="nft-detail">Backdrop: Sapphire 1.5%</div>
+                    <div class="nft-detail">Symbol: Inguz Rune 0.4%</div>
                 </div>
             </div>
             
             <div class="nft-details">
                 <div class="detail-row">
                     <span>Владелец</span>
-                    <span class="owner-name">анонимно</span>
+                    <span class="owner-value">анонимно</span>
                 </div>
                 <div class="detail-row">
-                    <span>Тираж</span>
-                    <span>580 319 / 593 781</span>
+                    <span>Количество</span>
+                    <span class="owner-value">580 319 / 593 781</span>
                 </div>
             </div>
             
             <div class="gift-info">
-                Подарен от <span class="gift-from">нудота</span> 
-                к <span class="gift-to">avtostopom po galaktike</span>
+                <div class="gift-text">
+                    <span class="gift-label">Подарен</span>
+                    <span class="gift-from">нудота</span>
+                    <span class="gift-arrow">→</span>
+                    <span class="gift-to">avtostopom po galaktike</span>
+                </div>
                 <div class="gift-date">9 июля 2025</div>
+                <div class="gift-comment">“Ти”</div>
+            </div>
+            
+            <div class="nft-footer">
+                <span class="telegram-badge">Telegram NFT</span>
+                <span class="created-badge">Создан из подарка</span>
             </div>
         </div>
 
+        <!-- Секция розыгрыша -->
         <div class="raffle-section">
             <h1 class="raffle-title">🎲 Ооооо, идет розыгрыш</h1>
             
@@ -67,14 +80,19 @@
                 Участвовать
             </button>
 
-            <div class="stats" id="stats">
-                Участников: <span id="participantsCount">0</span>
+            <div class="participants-section">
+                <div class="participants-header">
+                    <span class="participants-title">👥 Участники</span>
+                    <span class="participants-count" id="participantsCount">0</span>
+                </div>
+                <div class="participants-list" id="participantsList"></div>
             </div>
+
+            <div class="winner-section" id="winnerSection"></div>
         </div>
     </div>
 
     <div id="snackbar" class="snackbar"></div>
-
     <script src="script.js"></script>
 </body>
 </html>
